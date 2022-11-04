@@ -74,10 +74,10 @@ jsonwebtoken@^8.5.1:
     ms "^2.1.1"
     semver "^5.6.0"
 
-juejin-helper@1.6.0:
-  version "1.6.0"
-  resolved "https://registry.npmjs.org/juejin-helper/-/juejin-helper-1.6.0.tgz#8275e2fc45dc6ef3c44a450c456240d9d95c9cbc"
-  integrity sha512-+iX0uBFAeGwjTpILJ9F++bVBFv9IwNtgBB3H9fOKxhbWC1U4lmNvdqeC9+n6SISMln10TgrJ8eF2J9DdageD5Q==
+juejin-helper@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/juejin-helper/-/juejin-helper-1.6.1.tgz#4abe25cfad763d4e16c199f0450c01ed866a7254"
+  integrity sha512-twF0qbKZy6wyQhfCxx6/oUvwurD5DnXkXv57lctDH6g62iloaOdUJFzMN7TIfeSkeO3qdXtpWaO/7QE6krbjxg==
   dependencies:
     axios "^0.27.2"
     jsonwebtoken "^8.5.1"

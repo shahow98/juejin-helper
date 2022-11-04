@@ -404,37 +404,4 @@ ${this.history.length ? `\n游戏记录\n${gameLives}` : ""}
   }
 }
 
-async function run(args) {
-  const cookies = utils.getUsersCookie(env);
-  const messageList = [];
-  for (let cookie of cookies) {
-    const seaGold = new Seagold(cookie);
-
-    await utils.wait(utils.randomRangeNumber(1000, 5000)); // 初始等待1-5s
-    await seaGold.run();
-
-    const content = seaGold.toString();
-    console.log(content);
-
-    messageList.push(content);
-  }
-
-  const message = messageList.join(`\n${"-".repeat(15)}\n`);
-  pushMessage({
-    subject: "海底掘金游戏",
-    text: message
-  });
-}
-
-run(process.argv.splice(2)).catch((error) => {
-  pushMessage({
-    subject: "海底掘金游戏",
-    html: `
-<strong>Error</strong>
-<pre>${error.message}</pre>
-<div>如果版本过低请前往升级: <a href="https://github.com/iDerekLi/juejin-helper">juejin-helper</a></div>
-`.trim()
-  });
-
-  throw error;
-});
+module.exports = {Seagold};
